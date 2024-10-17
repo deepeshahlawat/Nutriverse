@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Dashboard with Icons and Updated Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="icon-menu">
+                <img src="logo.png">
+                <li><a href="#" class="active"><i class="fas fa-home"></i></a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i></a></li>
+                <li><a href="#"><i class="fas fa-running"></i></a></li>
+                <li><a href="#"><i class="fas fa-comment"></i></a></li>
+                <li><a href="#"><i class="fas fa-leaf"></i></a></li>
+                <li><a href="#"><i class="fas fa-cog"></i></a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Header with Welcome Text -->
+            <header class="header">
+                <div class="welcome-text">
+                    <p id="greeting">Good Morning</p>
+                    <h1>Welcome Back <span class="emoji">🎉</span></h1>
+                </div>
+                <input type="search" placeholder="Search">
+            </header>
+
+            <!-- Dashboard Section -->
+            <section class="dashboard">
+                <div class="activities">
+                    <h2>Track Your Daily Activities</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <h3>Workout</h3>
+                        <p>4 hrs</p>
+                    </div>
+                    <div class="card">
+                        <h3>Calories</h3>
+                        <p>1800 kcal</p>
+                    </div>
+                    <div class="card">
+                        <h3>Steps</h3>
+                        <p>2200 steps</p>
+                    </div>
+                </div>
+
+                <div class="goal-progress">
+                    <h3>Goal Progress</h3>
+                    <!-- Add chart or progress bar here -->
+                </div>
+            </section>
+
+            <!-- Schedule and Goals Section -->
+            <section class="schedule-goals">
+                <div class="schedule">
+                    <h3>My Schedule</h3>
+                    <ul>
+                        <li>Monday - Stretch at 08:00</li>
+                        <li>Tuesday - Back Stretch at 08:00</li>
+                        <li>Wednesday - Yoga at 08:00</li>
+                    </ul>
+                </div>
+
+                <div class="goals">
+                    <h3>Goals</h3>
+                    <p>Running on Track, Saturday, April 14</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

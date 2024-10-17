@@ -1,0 +1,180 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #ffffff;
+    padding: 9px 20px 15px 12px;
+    width: 70px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-left: 7px;
+    box-shadow: inset -5px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon-menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon-menu img{
+    width: 80px;
+    height: 80px;
+    margin: 23px 0px 0px 5px;
+}
+
+
+.icon-menu li {
+    margin: 20px 0;
+    margin: 20px 0px 0px 0px;
+}
+#logo{
+    margin-bottom: 0px;
+}
+
+.icon-menu li a {
+    color: #aaa;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 50%;
+}
+.icon-menu li a:hover, .icon-menu li a.active {
+    background-color: #ff7b1a;
+    color: white;
+}
+/* Icon hover and active state */
+.icon-menu li a:hover, .icon-menu li a.active {
+    background-color: #ff7b1a;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 123, 26, 0.7); /* Orange glow effect */
+}
+
+.icon-menu li a:hover i, .icon-menu li a.active i {
+    box-shadow: 0 0 15px rgba(255, 123, 26, 0.8); /* Icon glow */
+}
+
+/* Main Content */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-text p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.welcome-text h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f1f1f;
+    display: flex;
+    align-items: center;
+}
+
+.welcome-text .emoji {
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+.header input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Dashboard Section */
+.activities {
+    background-color: #ff9d4a;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #00c1d4;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+}
+
+.card:nth-child(2) {
+    background-color: #ff7b1a;
+}
+
+.card:nth-child(3) {
+    background-color: #b388ff;
+}
+
+/* Schedule and Goals Section */
+.schedule-goals {
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule, .goals {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+}
+
+.schedule ul {
+    list-style-type: none;
+}
+
+.schedule li {
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.goals p {
+    font-size: 16px;
+    color: #333;
+}
