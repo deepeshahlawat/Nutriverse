@@ -160,6 +160,9 @@
     width: 5.5rem;
     font-size: 3.25rem;
     cursor: pointer;
+    font-weight: 1000;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 6rem;
   }
   
   .slider__btn--left {
@@ -458,4 +461,38 @@
 .button-3d:active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     transform: translateY(2px);
+}
+.submit{
+  background-color: #007BFF;
+  border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    margin-left: 87rem;
+    opacity: 0;
+}
+.submit:hover {
+    background-color: #1f82c4; /* Darker green */
+}
+
+.submit:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(2px);
+}
+.submit:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  z-index: -1;
+  transition: all 0.2s ease;
 }
