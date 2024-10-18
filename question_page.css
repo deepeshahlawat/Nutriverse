@@ -1,0 +1,461 @@
+*{
+    margin: 1.5rem;
+  }
+    html {
+      margin: 3.5rem;
+      font-size: 62.5%;
+      box-sizing: border-box;  
+      background-color: whitesmoke;
+      background-image: url("istockphoto-1173579665-612x612.jpg");
+    
+    }
+    .logo{
+      height: 12rem;
+      width: 12rem;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+    }
+    .login_div{
+      margin: 1.5rem;
+      background-color: white;
+      height: 70rem;
+      border-radius: 2rem;
+      margin-top: 0;
+     
+    }
+    input {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      
+      
+      
+  }
+  
+  input:focus {
+      border-color: #1b1d1f;
+      outline: none; 
+  }
+  .credentials{
+    font-size: 2rem;
+    font-family: Artifakt Element Heavy;
+    
+  }
+  select {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    
+    background-color: white;
+    appearance: none; /* Remove default styling (works in most browsers) */
+    cursor: pointer;
+  }
+  
+  select:focus {
+    border-color: #0a0b0c; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  select:disabled {
+    background-color: #f0f0f0;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  
+  
+  input[type="number"] {
+     /* Full width */
+    padding: 10px;
+     /* Space between inputs */
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    
+  }
+  
+  input[type="number"]:focus {
+    border-color: #080b0e; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  .submit-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  .submit-button:active {
+    transform: scale(0.95);
+  }
+  .mail{
+    width: 40%;
+  
+  }
+  .colms{
+   position: relative;
+   margin-left: 15rem;
+  }
+  #signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14rem;
+  }
+
+  
+  .slider {
+    max-width: 100rem;
+    height: 80rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* THIS creates the animation! */
+    transition: transform 1s;
+    overflow: hidden;
+  }
+
+  
+  .slide > img {
+    /* Only for images that have different size than slide */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider__btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+  
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: inherit;
+    color: #333;
+    border-radius: 50%;
+    height: 5.5rem;
+    width: 5.5rem;
+    font-size: 3.25rem;
+    cursor: pointer;
+  }
+  
+  .slider__btn--left {
+    left: 6%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .slider__btn--right {
+    right: 6%;
+    transform: translate(50%, -50%);
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 0%;
+    top: 69rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .dots__dot {
+    border: none;
+    background-color: #b9b9b9;
+    opacity: 0.7;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-right: 1.75rem;
+    cursor: pointer;
+    transition: all 0.5s;
+  
+    /* Only necessary when overlying images */
+    /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+  }
+  
+  .dots__dot:last-child {
+    margin: 0;
+  }
+  
+  .dots__dot--active {
+    /* background-color: #fff; */
+    background-color: #3f76b4;
+    opacity: 1;
+  }
+  
+  /* TESTIMONIALS */
+  .testimonial {
+    width: 65%;
+    
+    height: 70rem;
+    
+  }
+  
+  .testimonial::before {
+    content: '';
+    position: absolute;
+    top: -5.7rem;
+    left: -6.8rem;
+    line-height: 1;
+    font-size: 20rem;
+    font-family: inherit;
+    color: black;
+    z-index: -1;
+  }
+  
+  .testimonial__header {
+    font-size: 3.15rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+ 
+  .descp{
+    margin-top: 1px;
+    font-size: 1.8rem;
+  }
+  .radio-container {
+    display: flex;
+    flex-direction: row;
+  
+    
+  }
+  .check{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .radio-button {
+    height: 19rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 12px;
+    background-color: white;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .radio-button input {
+    display: none; /* Hide the default radio button */
+  }
+  
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  
+  .radio-button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .radio-button:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+  }
+  
+  .radio-button input:checked + .checkmark {
+    background-color: #007BFF;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Optional: adding a dot effect for the checked state */
+  .radio-button input:checked + .checkmark::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btn {
+    margin-top: 0;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20rem; /* More rounded edges */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: fixed;
+  }
+  .radio-button2 {
+    height: 12rem;
+    width: 9rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 12px;
+    background-color: white;
+    border: 2px solid #007BFF;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .radio-button2 input {
+    display: none; /* Hide the default radio button */
+  }
+  .checkmark2 {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  
+  .radio-button2:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .radio-button2:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+  }
+  
+  .radio-button2 input:checked + .checkmark2 {
+    background-color: #007BFF;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Optional: adding a dot effect for the checked state */
+  .radio-button2 input:checked + .checkmark2::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .radio-container2 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    
+  }
+  .radio-button3 {
+    height: 10rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 12px;
+    background-color: white;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .radio-button3 input {
+    display: none; /* Hide the default radio button */
+  }
+  .radio-button3:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .radio-button3:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+  }
+  
+  .radio-button3 input:checked + .checkmark2 {
+    background-color: #007BFF;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Optional: adding a dot effect for the checked state */
+  .radio-button3 input:checked + .checkmark2::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .button-3d {
+    background-color: #4caf50; /* Green */
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    margin-left: 89rem;
+    margin-top: 63rem;
+}
+
+.button-3d:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+
+.button-3d:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.button-3d:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(2px);
+}

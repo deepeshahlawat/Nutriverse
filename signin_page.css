@@ -1,0 +1,208 @@
+*{
+  margin: 1.5rem;
+}
+  html {
+    margin: 3.5rem;
+    font-size: 62.5%;
+    box-sizing: border-box;  
+    background-color: whitesmoke;
+    background-image: url("istockphoto-1173579665-612x612.jpg");
+  }
+  .logo{
+    height: 12rem;
+    width: 12rem;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2px;
+  
+  
+  }
+  .login_div{
+    margin: 1.5rem;
+    background-color: white;
+    height: 58rem;
+    border-radius: 2rem;
+    margin-top: 0;
+   
+  }
+  input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    
+    
+    
+}
+
+input:focus {
+    border-color: #1b1d1f;
+    outline: none; 
+}
+.credentials{
+  font-size: 2rem;
+  font-family: Artifakt Element Heavy;
+  
+}
+select {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  
+  background-color: white;
+  appearance: none; /* Remove default styling (works in most browsers) */
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #0a0b0c; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+select:disabled {
+  background-color: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+
+
+input[type="number"] {
+   /* Full width */
+  padding: 10px;
+   /* Space between inputs */
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+input[type="number"]:focus {
+  border-color: #080b0e; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.submit-button {
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.submit-button:active {
+  transform: scale(0.95);
+}
+.mail{
+  width: 30%;
+
+}
+.colms{
+ position: relative;
+ margin-left: 15rem;
+}
+#signin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 14rem;
+}
+.operations {
+  margin:40px;
+  background-color: whitesmoke;
+  height: 55rem;
+}
+
+.operations__tab-container {
+  display: flex;
+  justify-content: end;
+}
+
+
+
+.operations__tab span {
+  margin-right: 1rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.operations__tab--1 {
+  background-color: rgb(114, 202, 106);
+}
+.operations__tab--2 {
+  background-color: rgb(114, 202, 106);
+}
+
+.operations__tab--1:hover {
+  background-color: green;
+}
+.operations__tab--2:hover {
+  background-color: green;
+}
+
+.operations__tab--3 {
+  background-color:rgb(114, 202, 106);
+  margin: 0;
+}
+
+.operations__tab--3:hover {
+  background-color: green;
+}
+
+.operations__tab--active {
+  transform: translateY(-66%);
+}
+
+.operations__content {
+  display: none;
+
+  /* JUST PRESENTATIONAL */
+  font-size: 1.7rem;
+  padding: 2.5rem 7rem 6.5rem 7rem;
+}
+
+.operations__content--active {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  column-gap: 3rem;
+  row-gap: 0.5rem;
+}
+
+.operations__header {
+  font-size: 4.25rem;
+  font-weight: 500;
+  align-self: center;
+  font-family: mortend;
+
+}
+
+.operations__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 0%;
+}
+
+.operations__icon svg {
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.operations__content p {
+  grid-column: 2;
+}
+label{
+  margin-right: 2px;
+}
+#options{
+  width: 10%;
+}
