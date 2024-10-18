@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
+.plan {
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    height: 20rem;
+    width: 18rem;
+}
+.price {
+    font-size: 2em;
+    color: #FFD700;
+}
+.features {
+    list-style-type: none;
+    padding: 0;
+}
+button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+button:hover {
+    background-color: #f40612;
+}
+.plans{
+    display: flex;
+    flex-direction: row;
+    max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo{
+    width: 7rem;
+    height: 7rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.free{
+    color: rgb(243, 245, 243);
+}
+.btn{
+    margin-top: 1.2rem;
+}
+.gold{
+    background-color: #FFD700;
+    color: #141414;
+}
