@@ -15,6 +15,8 @@ const slider = function () {
     const btnLeft = document.querySelector('.slider__btn--left');
     const btnRight = document.querySelector('.slider__btn--right');
     const dotContainer = document.querySelector('.dots');
+    const btnskip=document.querySelector('.button-3d');
+    const btnsub=document.querySelector('.submit');
   
     let curSlide = 0;
     const maxSlide = slides.length;
@@ -48,7 +50,9 @@ const slider = function () {
     // Next slide
     const nextSlide = function () {
       if (curSlide === maxSlide - 1) {
-        
+        btnRight.style.opacity="0";
+        btnskip.style.opacity="0";
+        btnsub.style.opacity="100";
       } else {
         curSlide++;
       }
