@@ -1,0 +1,419 @@
+/* General Reset */
+* {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Makes width and height include padding and border */
+}
+
+/* Body Styles */
+body {/*parameters mentioned in this part will only activate if each section doesnt have its own specified already */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Sets the font for the body */
+    line-height: 1.8; /* Line height for readability */
+    background-color: #ffffff; /* Light background for the body not required here since each section has its own background*/
+    color: #000000; /* Dark text color */
+}
+
+/* Styles for the navigation bar */
+nav {
+    background-color: rgb(0, 0, 0); /* Sets the background color to white */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Centers items vertically */
+    padding: 10px  50px; /* Adds padding to the nav */
+    box-shadow: 0 0px 40px rgba(0, 0, 0, 0.8); /* Adds shadow effect */
+    animation: slideIn 0.3s ease-out; /* Slide-in animation */
+    position: relative; /* Add position relative */
+    z-index: 1000; /* Ensures it's above other elements */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%); /* Start off-screen above */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Styles for the logo */
+.logo {
+    display: flex; /* Flex container for logo */
+    align-items: center; /* Centers logo vertically */
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+/* Styles for logo text */
+.logo h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px; /* Makes the logo text larger */
+    margin-left: 10px; /* Adds space between image and text */
+    margin-bottom: 20px;
+    text-decoration: none;
+
+}
+.logo h1 a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Styles for the navigation list */
+nav ul {
+    display: flex; /* Uses flexbox to align items horizontally */
+    list-style: none; /* Removes bullets from the list */
+    justify-content: center; /* Center-aligns navigation links */
+    flex-grow: 1; /* Allows the ul to take available space */
+}
+
+/* Styles for each navigation link */
+nav ul li {
+    margin: 0 1px; /* Adds space between navigation items */
+    position: relative; /* Positioning context for the pseudo-element */
+}
+
+nav ul li::after {
+    content: ''; /* Pseudo-element for underline effect */
+    position: absolute;
+    width: 100%; /* Full width of the item */
+    height: 3px; /* Thickness of the border */
+    background: #007BFF; /* Color of the border */
+    bottom: -5px; /* Position below the text */
+    left: 0;
+    transform: scaleX(0); /* Start with 0 width */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1); /* Expand to full width on hover */
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255); /* Sets text color */
+    text-decoration: none; /* Removes underline */
+    padding: 10px; /* Adds padding */
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background on hover */
+    color: #007BFF; /* Change text color on hover */
+    border-radius: 5px; /* Rounds corners */
+}
+
+/* Styles for login button */
+nav .login {
+    margin-left:auto; /* Pushes the login button to the far right */
+    background-color: white; /* Sets initial background color to white */
+    color: black; /* Sets initial text color to black */
+    padding: 10px 15px; /* Adds padding to the button */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds the corners */
+    cursor: pointer; /* Changes cursor to pointer */
+    text-decoration: none; /* Removes underline from text */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+nav .login:hover {
+    background-color: black; /* Changes background color to black on hover */
+    color: white; /* Changes text color to white on hover */
+}
+
+/* Main container for the body */
+.main-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Align items vertically */
+    padding: 20px; /* Add padding */
+}
+
+
+
+/* App Image Section */
+.app-image img {
+    max-width: 100%; /* Make sure the image is responsive */
+    height: auto; /* Keep aspect ratio */
+}
+
+/* Features Section */
+.features {
+    padding: 20px; /* Add padding */
+    background-color: #f9f9f9; /* Light background for features */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.features h3 {
+    font-size: 28px; /* Font size for features heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Feature Item Styling */
+.feature-item {
+    margin-bottom: 15px; /* Space between features */
+    padding: 15px; /* Padding for each feature */
+    border: 1px solid #ccc; /* Border around each feature */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+.feature-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+/* Home Section Styles */
+.home-section { 
+    display: flex; /* Flex layout for content and app interface */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 150px; /* Padding around the section */
+    background-image: url("images/image (1).png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    background: rgb(255, 255, 255); /* White with 80% opacity */
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 700px; /* Max width to control box size */
+    margin: 300px -20px 0; /* Space around the content */
+    
+}
+
+.home-content h2 {
+    margin-bottom: 5px;
+    color: #050505; /* Desired color */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+.home-content p {
+    font-size: 25px;
+    color: #000000;
+}
+
+
+
+/* App interface styles */
+.app-interface {
+    flex: 1; /* Allow app interface to grow */
+    text-align: center; /* Center the app image */
+}
+
+/* Responsive image */
+.app-interface img {
+    max-width: 100%; /* Make the image responsive */
+    height: 500px; /* Maintain aspect ratio */
+    margin-top: 150px;
+    margin-left: 100px;
+    border-radius: 25px;
+}
+
+    
+
+.about-section {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 120px 80px; /* Padding for the section */
+    border-radius: 100px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center; /* Centered text */
+    margin: 100px auto; /* Center the section with margin */
+    max-width: 800px; /* Limit the width */
+    height: 700px;
+}
+
+.about-section h2 {
+    font-size: 36px; /* Larger font for the heading */
+    color: #007BFF; /* Heading color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.about-content p {
+    font-size: 22px; /* Font size for paragraphs */
+    line-height: 1.7; /* Better readability */
+    margin-bottom: 25px; /* Space between paragraphs */
+    color: #333; /* Text color */
+}
+.features-section {
+    padding: 40px 40px; /* Adds padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 150px;
+    
+    margin:200px auto ;
+    
+    height:1000px;
+    width: 1200px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+    gap: 10px; /* Space between items */
+    margin-top: 50px; /* Space above the grid */
+}
+
+.feature-item {
+    
+    padding: 15px; /* Padding for each feature */
+    padding-left: 20px;
+    border: 1px solid #ccc; /* Border around each feature */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s; /* Animation on hover */
+    background-color: #fff; /* White background for contrast */
+    text-align: center;
+    
+}
+
+.feature-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+.features-section h2 {
+    font-size: 36px; /* Font size for the main heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center-align the heading */
+    color: #0033cc; /* Set color for the section title to blue */
+
+}
+
+
+.feature-item h3 {
+    color: #000000; /* Set color for feature headings to blue */
+    font-size: 22px;
+    margin-bottom: 10px;
+
+}
+
+.feature-item p {
+    padding: 20px 5px;
+    
+    color: #333; /* Darker color for feature descriptions for contrast */
+    font-size: 18px;
+}
+.customer-reviews {
+    background-color: #ffffff; /* Light background for contrast */
+    padding:150px ; /* Space around the section */
+    overflow: hidden; /* Hide overflow to create scrolling effect */
+    margin-bottom: 150px;     /* Positioning for the wrapper */
+}
+
+.customer-reviews h2 {
+    font-size: 35px;
+    text-align: center; /* Center the heading */
+    color: #0033cc; /* Color for the heading */
+    margin-bottom: 75px; /* Space below the heading */
+}
+
+.reviews-container {
+    white-space: nowrap; /* Prevent line breaks */
+    animation: scroll 13s linear infinite; /* Animation for scrolling */
+}
+
+
+
+.review-item {
+    display: inline-block; /* Align each review horizontally */
+    width: 650px; /* Fixed width for review boxes */
+    height: auto; /* Auto height to adjust based on content */
+    margin-right: 50px; /* Space between reviews */
+    font-size: 18px; /* Font size for the reviews */
+    color: #333; /* Color for the review text */
+    padding: 80px 10px; /* Padding around review items (adjusted for left alignment) */
+    border: 1px solid #ddd; /* Border around each review */
+    border-radius: 20px; /* Rounded corners */
+    background-color: #fff; /* Background color for each review */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    text-align: left; /* Align text to the left */
+    line-height: 1.4; /* Line height for better readability */
+    overflow-wrap: break-word; /* Break long words to prevent overflow */
+    max-height: 500px; /* Optional: Set a maximum height for uniformity */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); } /* Scroll the entire container */
+}
+
+.contact-us {
+    background-color: #0033cc; /* Blue background color */
+    color: #fff; /* White text color for contrast */
+    padding: 70px; /* Space around the section */
+    text-align: center; /* Center the text */
+}
+
+.contact-us h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-us p {
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+.contact-form {
+    display: inline-block; /* Center the form */
+    text-align: left; /* Align form elements to the left */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for form */
+    padding: 20px; /* Space around the form */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.contact-form label {
+    display: block; /* Make labels take full width */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Full width for input and textarea */
+    padding: 10px; /* Space inside input fields */
+    margin-bottom: 15px; /* Space below each input */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.contact-form button {
+    background-color: #0056b3; /* Darker blue for button */
+    color: #fff; /* White text color for button */
+    padding: 10px 20px; /* Space inside the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for the button */
+}
+
+.contact-form button:hover {
+    background-color: #004494; /* Darker blue on hover */
+}
+.footer {
+    background-color: #f9f9f9; /* Light background for contrast */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Space around the footer */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}
+
+.footer p {
+    color: #0033cc; /* Blue text color */
+    margin: 0; /* Remove default margin */
+    font-size: 18px; /* Font size for better readability */
+}
+
+
+nav {
+    position: fixed; /* Make the navbar fixed to the top */
+    width: 100%;     /* Ensure it spans the full width */
+    top: 0;          /* Initial position */
+    transition: top 0.2s; /* Smooth transition for hiding and showing */
+    z-index: 1000;   /* Ensure it stays on top of other elements */
+}
