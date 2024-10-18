@@ -20,7 +20,7 @@ nav {
     justify-content: space-between; /* Space between logo and menu */
     align-items: center; /* Centers items vertically */
     padding: 10px  50px; /* Adds padding to the nav */
-    box-shadow: 0 0px 40px rgba(0, 0, 0, 0.8); /* Adds shadow effect */
+     
     animation: slideIn 0.3s ease-out; /* Slide-in animation */
     position: relative; /* Add position relative */
     z-index: 1000; /* Ensures it's above other elements */
@@ -171,26 +171,25 @@ nav .login:hover {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    color: white;
+    color: rgb(226, 226, 226);
     text-align: center;
 }
 
 .home-content {
     position: relative;
     z-index: 2;
-    background: rgb(255, 255, 255); /* White with 80% opacity */
+    background: rgba(255, 255, 255, 0.69); /* White with 80% opacity */
     padding: 20px;
     border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     max-width: 700px; /* Max width to control box size */
-    margin: 300px -20px 0; /* Space around the content */
+    margin: 120px -20px 0; /* Space around the content */
     
 }
 
 .home-content h2 {
     margin-bottom: 5px;
-    color: #050505; /* Desired color */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0018b7; /* Desired color */
+    font-family: Helvetica, sans-serif;
     font-size: 40px;
 }
 
@@ -231,7 +230,7 @@ nav .login:hover {
 
 .about-section h2 {
     font-size: 36px; /* Larger font for the heading */
-    color: #007BFF; /* Heading color */
+    color: #000000; /* Heading color */
     margin-bottom: 20px; /* Space below the heading */
 }
 
@@ -280,7 +279,7 @@ nav .login:hover {
     font-size: 36px; /* Font size for the main heading */
     margin-bottom: 20px; /* Space below the heading */
     text-align: center; /* Center-align the heading */
-    color: #0033cc; /* Set color for the section title to blue */
+    color: #000000; /* Set color for the section title to blue */
 
 }
 
@@ -308,7 +307,7 @@ nav .login:hover {
 .customer-reviews h2 {
     font-size: 35px;
     text-align: center; /* Center the heading */
-    color: #0033cc; /* Color for the heading */
+    color: #000000; /* Color for the heading */
     margin-bottom: 75px; /* Space below the heading */
 }
 
@@ -344,7 +343,7 @@ nav .login:hover {
 }
 
 .contact-us {
-    background-color: #0033cc; /* Blue background color */
+    background-color: #000000; /* Blue background color */
     color: #fff; /* White text color for contrast */
     padding: 70px; /* Space around the section */
     text-align: center; /* Center the text */
@@ -370,6 +369,7 @@ nav .login:hover {
 .contact-form label {
     display: block; /* Make labels take full width */
     margin-bottom: 5px; /* Space below labels */
+    color: #000000;
 }
 
 .contact-form input,
@@ -377,7 +377,7 @@ nav .login:hover {
     width: 100%; /* Full width for input and textarea */
     padding: 10px; /* Space inside input fields */
     margin-bottom: 15px; /* Space below each input */
-    border: 1px solid #ccc; /* Border for inputs */
+    border: 1px solid #000000; /* Border for inputs */
     border-radius: 10px; /* Rounded corners */
 }
 
