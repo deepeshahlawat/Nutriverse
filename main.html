@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Dashboard with Icons and Updated Header</title>
+    <title>Your Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
             <ul class="icon-menu">
-                <img src="logo.png">
+                <img src="logo1.png">
                 <li><a href="#" class="active"><i class="fas fa-home"></i></a></li>
-                <li><a href="#"><i class="fas fa-chart-line"></i></a></li>
-                <li><a href="#"><i class="fas fa-running"></i></a></li>
                 <li><a href="#"><i class="fas fa-comment"></i></a></li>
-                <li><a href="#"><i class="fas fa-leaf"></i></a></li>
-                <li><a href="#"><i class="fas fa-cog"></i></a></li>
-                <li><a href="#"><i class="fas fa-sign-out-alt"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-medal"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-lightbulb"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-robot"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-wallet"></i></a></li>
+                <li id="logout"><a href="#"><i class="fas fa-sign-out-alt"></i></a></li>
             </ul>
         </aside>
 
@@ -30,56 +32,120 @@
                 <div class="welcome-text">
                     <p id="greeting">Good Morning</p>
                     <h1>Welcome Back <span class="emoji">🎉</span></h1>
+
+                    <div class="navbar-right">
+                        <i class="fas fa-bell"></i> <!-- Notification icon -->
+                        <i class="fas fa-cog"></i> <!-- Settings icon -->
+                        <img src="profile.jpg" alt="Profile" class="profile-img"> <!-- Profile picture -->
+                    </div>
                 </div>
-                <input type="search" placeholder="Search">
             </header>
 
             <!-- Dashboard Section -->
             <section class="dashboard">
-                <div class="activities">
-                    <h2>Track Your Daily Activities</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <div class="carousel-item">
+                            <img src="banner1.jpg" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="banner2.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="banner3.jpg" alt="Image 3">
+                        </div>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+
+                    <!-- Dots -->
+                    <div class="dots-container">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
                 </div>
+
 
                 <div class="cards">
                     <div class="card">
-                        <h3>Workout</h3>
-                        <p>4 hrs</p>
+                        <h3><i class="fa-solid fa-fire"></i> Carbs</h3>
+                        <p>270g</p>
                     </div>
                     <div class="card">
-                        <h3>Calories</h3>
-                        <p>1800 kcal</p>
+                        <h3><i class="fa-solid fa-egg"></i> Protein</h3>
+                        <p>97g</p>
                     </div>
                     <div class="card">
-                        <h3>Steps</h3>
-                        <p>2200 steps</p>
+                        <h3><i class="fa-solid fa-pizza-slice"></i> Fats</h3>
+                        <p>150g</p>
                     </div>
                 </div>
 
-                <div class="goal-progress">
-                    <h3>Goal Progress</h3>
-                    <!-- Add chart or progress bar here -->
-                </div>
-            </section>
 
-            <!-- Schedule and Goals Section -->
-            <section class="schedule-goals">
-                <div class="schedule">
-                    <h3>My Schedule</h3>
-                    <ul>
-                        <li>Monday - Stretch at 08:00</li>
-                        <li>Tuesday - Back Stretch at 08:00</li>
-                        <li>Wednesday - Yoga at 08:00</li>
-                    </ul>
-                </div>
-
-                <div class="goals">
-                    <h3>Goals</h3>
-                    <p>Running on Track, Saturday, April 14</p>
-                </div>
             </section>
+            <div class="charthead">Nutrients Consumed:</div>
+            <div class="chartsprogress-container">
+                
+                <div class="chart-container">
+                    <canvas id="goalProgressChart"></canvas>
+                </div>
+                <div class="progress-card">
+                    <h3>Monthly Progress</h3>
+                    <div class="progress-circle">
+                        <div class="progress-bar">
+                            <span class="progress-percentage">80%</span>
+                        </div>
+                    </div>
+                    <p class="progress-description">You have achieved <span class="highlight">80%</span> of your goal
+                        this month</p>
+                </div>
+            </div>
+
+            </section>
+            <div class="schedule-container">
+                <div class="schedule-header">
+                    <h3>Meals Consumed</h3>
+                    <a href="#">+ ADD</a>
+                </div>
+        
+                <div class="schedule-card">
+                    <div class="day">Monday</div>
+                    <div class="details">
+                        <span>Bread Jam</span>
+                        <span>At 08:00am</span>
+                    </div>
+                    <div class="progress">6 Pieces</div>
+                </div>
+        
+                <div class="schedule-card">
+                    <div class="day">Sunday</div>
+                    <div class="details">
+                        <span>Pizza</span>
+                        <span>At 09:00pm</span>
+                    </div>
+                    <div class="progress">Medium</div>
+                </div>
+        
+                <div class="schedule-card">
+                    <div class="day">Sunday</div>
+                    <div class="details">
+                        <span>Chips</span>
+                        <span>At 07:30pm</span>
+                    </div>
+                    <div class="progress">1 Packet</div>
+                </div>
+            </div>
+            <div class="communitycontainer">
+                <div class="communitycard">Explore</div>
+                <div class="communitycard">Communities  <i class="fas fa-arrow-right"></i></div>
+            </div>
         </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
