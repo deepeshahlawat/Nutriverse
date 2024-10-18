@@ -1,6 +1,7 @@
 *{
   margin: 1.5rem;
 }
+
   html {
     margin: 3.5rem;
     font-size: 62.5%;
@@ -8,6 +9,7 @@
     background-color: whitesmoke;
     background-image: url("istockphoto-1173579665-612x612.jpg");
   }
+
   .logo{
     height: 12rem;
     width: 12rem;
@@ -90,6 +92,7 @@ input[type="number"]:focus {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left:-4rem;
 }
 
 .submit-button:hover {
@@ -101,12 +104,12 @@ input[type="number"]:focus {
   transform: scale(0.95);
 }
 .mail{
-  width: 30%;
+  width: 59%;
 
 }
 .colms{
  position: relative;
- margin-left: 15rem;
+ margin-left: 22rem;
 }
 #signin{
   display: flex;
@@ -205,4 +208,8 @@ label{
 }
 #options{
   width: 10%;
+}
+.age{
+  width: 3.5%;
+
 }
