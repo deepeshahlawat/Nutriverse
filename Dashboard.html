@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="icon-menu">
+                <img src="z (1).png">
+                <li><a href="Dashboard.html" class="active"><i class="fas fa-home"></i></a></li>
+                <li><a href="Community.html"><i class="fas fa-comment"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-medal"></i></a></li>
+                <li><a href="Education.html"><i class="fa-solid fa-lightbulb"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-robot"></i></a></li>
+                <li><a href="subs.html"><i class="fa-solid fa-wallet"></i></a></li>
+                <li id="logout"><a href="signin_page.html"><i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Header with Welcome Text -->
+            <header class="header">
+                <div class="welcome-text">
+                    <p id="greeting">Good Morning</p>
+                    <h1>Welcome Back <span class="emoji">🎉</span></h1>
+
+                    <div class="navbar-right">
+                        <i class="fas fa-bell"></i> <!-- Notification icon -->
+                        <i class="fas fa-cog"></i> <!-- Settings icon -->
+                        <img src="profile.jpg" alt="Profile" class="profile-img"> <!-- Profile picture -->
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Section -->
+            <section class="dashboard">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <div class="carousel-item">
+                            <img src="banner1.jpg" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="banner2.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="banner3.jpg" alt="Image 3">
+                        </div>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+
+                    <!-- Dots -->
+                    <div class="dots-container">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <div class="card">
+                        <h3><i class="fa-solid fa-fire"></i> Carbs</h3>
+                        <p>270g</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fa-solid fa-egg"></i> Protein</h3>
+                        <p>97g</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fa-solid fa-pizza-slice"></i> Fats</h3>
+                        <p>150g</p>
+                    </div>
+                </div>
+
+
+            </section>
+            <div class="charthead">Nutrients Consumed:</div>
+            <div class="chartsprogress-container">
+                
+                <div class="chart-container">
+                    <canvas id="goalProgressChart"></canvas>
+                </div>
+                <div class="progress-card">
+                    <h3>Monthly Progress</h3>
+                    <div class="progress-circle">
+                        <div class="progress-bar">
+                            <span class="progress-percentage">80%</span>
+                        </div>
+                    </div>
+                    <p class="progress-description">You have achieved <span class="highlight">80%</span> of your goal
+                        this month</p>
+                </div>
+            </div>
+
+            </section>
+            <div class="schedule-container">
+                <div class="schedule-header">
+                    <h3>Meals Consumed</h3>
+                    <a href="#">+ ADD</a>
+                </div>
+        
+                <div class="schedule-card">
+                    <div class="day">Monday</div>
+                    <div class="details">
+                        <span>Bread Jam</span>
+                        <span>At 08:00am</span>
+                    </div>
+                    <div class="progress">6 Pieces</div>
+                </div>
+        
+                <div class="schedule-card">
+                    <div class="day">Sunday</div>
+                    <div class="details">
+                        <span>Pizza</span>
+                        <span>At 09:00pm</span>
+                    </div>
+                    <div class="progress">Medium</div>
+                </div>
+        
+                <div class="schedule-card">
+                    <div class="day">Sunday</div>
+                    <div class="details">
+                        <span>Chips</span>
+                        <span>At 07:30pm</span>
+                    </div>
+                    <div class="progress">1 Packet</div>
+                </div>
+            </div>
+            <div class="communitycontainer">
+                <div class="communitycard">Explore</div>
+                <div class="communitycard">Communities  <i class="fas fa-arrow-right"></i></div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+/* Resetting default browser styles */
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #ffffff; /* Set background to white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title styles */
+h1 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Grid setup */
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Community tile */
+.community-tile {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.community-tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.04);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.community-tile:hover::before {
+    opacity: 1;
+}
+
+.community-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    background-color: #f4f9fd;
+}
+
+.community-tile i {
+    font-size: 2.8rem;
+    color: #388e3c;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Adjust icon colors to be multi-colored */
+.community-tile:nth-child(1) i {
+    color: #FF5722; /* Orange for 'Diabetes Support' */
+}
+
+.community-tile:nth-child(2) i {
+    color: #673AB7; /* Purple for 'Weight Management' */
+}
+
+.community-tile:nth-child(3) i {
+    color: #2196F3; /* Blue for 'Plant-Based Living' */
+}
+
+.community-tile:nth-child(4) i {
+    color: #FFC107; /* Yellow for 'Active Lifestyle' */
+}
+
+.community-tile:hover i {
+    transform: scale(1.1);
+}
+
+/* Text styling */
+h2 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+span {
+    font-size: 0.9rem;
+    color: #777;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Button styles with color variance */
+button {
+    background-color: #43a047;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(67, 160, 71, 0.3);
+    position: relative; /* Allow positioning for click animation */
+}
+
+/* Each button has a different color */
+.community-tile:nth-child(1) button {
+    background-color: #FF5722; /* Orange */
+}
+
+.community-tile:nth-child(2) button {
+    background-color: #673AB7; /* Purple */
+}
+
+.community-tile:nth-child(3) button {
+    background-color: #2196F3; /* Blue */
+}
+
+.community-tile:nth-child(4) button {
+    background-color: #FFC107; /* Yellow */
+}
+
+button:hover {
+    background-color: #37474F;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(55, 71, 79, 0.4);
+}
+
+/* Click animation */
+button:active {
+    transform: scale(0.95); /* Slightly shrink the button */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    p, span {
+        font-size: 0.9rem;
+    }
+
+    .community-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        gap: 20px;
+    }
+}
+
+/* Tile hover animation for subtlety */
+@keyframes hover-glow {
+    0% { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); }
+    50% { box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18); }
+    100% { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); }
+}

@@ -213,3 +213,7 @@ label{
   width: 3.5%;
 
 }
+a{
+  text-decoration: none;
+  color: white;
+}
